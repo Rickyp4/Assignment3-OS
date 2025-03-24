@@ -126,7 +126,7 @@ int main() {
     
     // Create threads simultaneously
     for (int i = 0; i < 4; i++) {
-        pthread_create(&threads[i], NULL, writeCourse, (void*)&i);
+        pthread_create(&threads[i], NULL, writeCourse, (void*)&course[i]);
         pthread_join(threads[i], NULL);
     }
 

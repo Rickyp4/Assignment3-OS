@@ -122,6 +122,9 @@ int main() {
     fgets(student.name, sizeof(student.name), stdin);
     
     // Remainder of the code..
+
+    enum Course course = {CS3443, CS4323, CS1003, CS3353};
+    
     // Create threads simultaneously
     for (int i = 0; i < 4; i++) {
         pthread_create(&threads[i], NULL, writeCourse, (void*)&i);

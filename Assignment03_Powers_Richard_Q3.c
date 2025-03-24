@@ -61,16 +61,15 @@ void *writeCourse(void *arg) {
     // Wait on semaphore in order
     switch(course){
         case CS3443:
-            sem_wait(&sem_CS3443);
             break;
         case CS4323:
-            sem_wait(&sem_CS4323);
+            sem_wait(&sem_CS3443);
             break;
         case CS1003:
-            sem_wait(&sem_CS1003);
+            sem_wait(&sem_CS4323);
             break;
         case CS3353:
-            sem_wait(&sem_CS3353);
+            sem_wait(&sem_CS1003);
             break;
         default:
             break; 
